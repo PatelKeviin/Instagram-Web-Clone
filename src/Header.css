@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.header__container {
+  display: flex;
+  width: 100%;
+  max-width: 950px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__searchBar {
+  font-family: FontAwesome, "proxima-nova";
+  font-style: normal;
+  text-decoration: inherit;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  height: 23px;
+  width: 210px;
+}
+
+input[type="text"]::placeholder {
+  /* Firefox, Chrome, Opera */
+  text-align: center;
+  font-weight: 100;
+  color: #b0b0b0;
+}
+
+.header__nav {
+  max-width: 190px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-top: 8px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.header__navLogo {
+  height: 25px;
+  object-fit: contain;
+}
