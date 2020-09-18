@@ -1,17 +1,20 @@
 import React from "react";
 import "./Header.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="header">
       <div className="header__container">
         <div className="header__logo__container">
-          <img
-            className="header__logo"
-            src={require("./images/instagram-header-logo.png")}
-            alt=""
-          />
+          <Link to="/login">
+            <img
+              className="header__logo"
+              src={require("./images/instagram-header-logo.png")}
+              alt=""
+            />
+          </Link>
         </div>
 
         <div className="header__search">

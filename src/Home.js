@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Stories from "./Stories";
+import Posts from "./Posts";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <div className="home__container">
         <div className="home__left">
           <Stories />
+          <Posts />
         </div>
       </div>
     </div>

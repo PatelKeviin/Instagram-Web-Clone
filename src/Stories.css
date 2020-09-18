@@ -1,12 +1,31 @@
 .stories {
+  display: flex;
+  align-items: center;
+}
+
+.stories__container {
+  margin-left: -25px;
+  margin-right: -25px;
   width: 100%;
   max-width: 600px;
   display: flex;
   justify-content: flex-start;
   background-color: white;
   border: 1px solid lightgray;
-  height: 120px;
+  height: 110px;
   align-items: center;
+  overflow-x: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.stories__container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.stories__container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .stories__story {
@@ -21,4 +40,15 @@
 .stories__image {
   width: 60px;
   height: 60px;
+}
+
+.stories__scrollImage {
+  z-index: 1;
+  cursor: pointer;
+  position: sticky;
+  width: 25px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
 }
