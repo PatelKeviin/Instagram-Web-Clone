@@ -1,14 +1,17 @@
 import React from "react";
 import "./Header.css";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import auth from "./config/firebaseConfig";
 
 function Header() {
+  const history = useHistory();
+
   return (
     <div className="header">
       <div className="header__container">
         <div className="header__logo__container">
-          <Link to="/login">
+          <Link to="/">
             <img
               className="header__logo"
               src={require("./images/instagram-header-logo.png")}
@@ -33,18 +36,22 @@ function Header() {
           />
           <img
             className="header__navLogo"
-            src={require("./images/home.png")}
+            src={require("./images/compass.PNG")}
             alt=""
           />
           <img
             className="header__navLogo"
-            src={require("./images/home.png")}
+            src={require("./images/like.PNG")}
             alt=""
           />
           <img
-            className="header__navLogo"
-            src={require("./images/home.png")}
+            className="header__profile header__navLogo"
+            src={require("./images/log-out.PNG")}
             alt=""
+            onClick={() => {
+              auth.signOut();
+              history.replace("/login");
+            }}
           />
         </div>
       </div>

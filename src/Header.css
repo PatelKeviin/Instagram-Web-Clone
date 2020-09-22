@@ -6,6 +6,7 @@
   background-color: white;
   border: 1px solid lightgray;
   position: sticky;
+  margin-bottom: 25px;
 }
 
 .header__container {
@@ -50,4 +51,8 @@ input[type="text"]::placeholder {
 .header__navLogo {
   height: 25px;
   object-fit: contain;
+}
+
+.header__profile {
+  cursor: pointer;
 }

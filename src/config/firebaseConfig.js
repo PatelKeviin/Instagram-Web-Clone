@@ -16,5 +16,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Accessing firebase authentication services
+firebase.auth().useDeviceLanguage();
 const auth = firebase.auth();
+export const facebookAuth = new firebase.auth.FacebookAuthProvider();
+
 export default auth;
